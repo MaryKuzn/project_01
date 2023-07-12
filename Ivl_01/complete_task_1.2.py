@@ -17,23 +17,20 @@ my_favorite_songs = [
     ['Nowhere to Run', 2.58],
     ['In This World', 4.02],
 ]
-#1 способ
+#1 способ решения
 print(f"Три песни звучат {my_favorite_songs[2][1] + my_favorite_songs[5][1] + my_favorite_songs[8][1]} минут")
 
-#2 способ
+#2 способ решения
 import random
-random.choices(my_favorite_songs, k=3)
+print(f"Три песни звучат {my_favorite_songs[random.randint(0,len(my_favorite_songs)-1)][1] + my_favorite_songs[random.randint(0,len(my_favorite_songs)-1)][1] + my_favorite_songs[random.randint(0,len(my_favorite_songs)-1)][1]} минут")
+
+#3 способ решения random.choices(my_favorite_songs, k=3)
+import random
 sum_songs = 0
 for i in random.choices(my_favorite_songs, k=3):
     sum_songs += i[1]
 print(f"Сумма трех случайных треков {sum_songs} минут")
-
-#Общее время звучания треков
-#total_songs = 0
-#for i in my_favorite_songs:
-    #total_songs += i[1]
-#print(f"Общее время звучания треков {total_songs} минут")    
-
+   
 # Пункт B. 
 # Есть словарь песен 
 # Распечатайте общее время звучания трех случайных песен
