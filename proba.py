@@ -29,6 +29,7 @@ print(f"Население города '{population[1][0]}' - {population[1][1]
 total_population = 0
 for i in population:
     total_population += int(i[1])
+    print(total_population)
 
-    from pprint import pprint
-pprint(dir(towns))
+    #from pprint import pprint
+#pprint(dir(towns))
