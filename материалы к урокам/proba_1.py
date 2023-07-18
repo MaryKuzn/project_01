@@ -52,14 +52,17 @@ while i < len(room_prices):
     # Дано 2 числа
     #описать логику деления числа a на число b, не используя операции деления
     
-    a, b = 250, 5
+def div(a, b):
     i = a
     count_div = 0
 
-    while i >= 0:
+    while i > 0:
         i -= b
         count_div += 1
-    print(f"Результат деления {a} на {b} = {count_div}")
+    return count_div
+
+print(div(10, 5))
+
 
 
 

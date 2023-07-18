@@ -24,8 +24,18 @@ store = {
 }
 
 # Рассчитайте на какую сумму лежит каждого товара на складе.
-#
 # Вывести суммарную стоимость каждого товара в магазине в формате:
 # "<товар> - <кол-во> шт, стоимость <общая стоимость> руб"
-
 # Пример: "Кроссовки тип 3 (Adidas) - 31 шт, стоимость 50747 руб"
+
+### Решение
+for k, v in titles.items():
+    sum_titles = 0
+    quantity_titles = 0
+    for i in range(len(store[v])):
+        sum_titles += store[v][i]['quantity'] * store[v][i]['price']
+        quantity_titles += store[v][i]['quantity']
+    print(f'{k} - {quantity_titles} шт, стоимость {sum_titles} руб')
+
+
+

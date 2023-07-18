@@ -15,6 +15,7 @@
     # Введите номер месяца: 15
     # Такого месяца нет!
 
+# Вариант 1
 months_year = {'Январь. 31 день': 1,
     'Февраль. 28 дней': 2,
     'Март. 31 день': 3,
@@ -36,6 +37,37 @@ for i in months_year:
         break
 else:  
     print("Такого месяца нет!") 
+
+# Вариант 2
+months_year = [
+    ['Январь', 31],
+    ['Февраль', 28],
+    ['Март', 31],
+    ['Апрель', 30],
+    ['Май', 31],
+    ['Июнь', 30],
+    ['Июль', 31],
+    ['Август', 31],
+    ['Сентябрь', 30],
+    ['Октябрь', 31],
+    ['Ноябрь', 30],
+    ['Декабрь', 31],
+]
+
+num_months = int(input("Введи номер месяца:"))
+if num_months in range(1,13):
+  print(f"Вы ввели {months_year[num_months-1][0]}. {months_year[num_months-1][1]} дней")
+else:
+   print("Такого месяца нет!")  
+
+# Вариант 3
+num_months = int(input("Введи номер месяца:"))
+for month in range(1, len(months_year)+1):
+  if month == num_months:
+    print(f"Вы ввели {months_year[month-1][0]}. {months_year[month-1][1]} дней")
+    break
+else:
+   print("Такого месяца нет!")
 
 
     
